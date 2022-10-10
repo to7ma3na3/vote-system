@@ -1,0 +1,646 @@
+@charset "UTF-8";
+
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;  
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+
+/* ここから */
+body {
+    width: 90vw;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+header {
+    display: block;
+    text-align: center;
+}
+
+header .main-nav {
+    display: flex;
+    justify-content: space-around;
+    line-height: 2;
+    font-size: 14px;
+    color: rgb(42, 2, 102);
+
+}
+
+h1 {
+    font-size: 22px;
+    line-height: 2;
+    color: cornflowerblue;
+}
+
+h2 {
+    font-size: 20px;
+    line-height: 2;
+    color: #777;
+}
+
+h3 {
+    margin-top: 20px;
+    font-size: 17px;
+}
+
+h4 {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.8;
+}
+.date {
+    margin-left: 5vw;
+    font-size: 18px;
+}
+
+.candidate {
+    margin-left: 5vw;
+    line-height: 1.8;
+}
+
+.candidate .meibo {
+    display: block;
+    margin: 0 auto;
+    font-weight: bold;
+    width: 130px;
+    border: 1px solid #000;
+    background-color: rgb(216, 215, 215);
+}
+
+.candidate .meibo:hover {
+    cursor: pointer;
+}
+
+.candidate .names {
+    display: none;
+    width: 90%;
+    margin: 4px auto;
+    padding: 5px;
+    /* margin: 5px 5%; */
+    list-style: none;
+    border: 1px solid #777;
+    line-height: 1.5;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.candidate .appear {
+    display: block;
+}
+
+.candidate .names li {
+    font-weight: normal;
+    text-align: center;
+}
+
+.methods {
+    margin-top: 30px;
+    margin-left: 5vw;
+    line-height: 1.6;
+}
+
+.methods a {
+    margin: 0 20px 0;
+}
+
+.netVote {
+    margin-top: 30px;
+    margin-left: 5vw;
+}
+
+.netVote h4 {
+    margin-top: 25px;
+    line-height: 1.5;
+}
+
+.netVote h5 {
+    font-weight: normal;
+    line-height: 1.8;
+    margin-left: 25px;
+}
+
+.netVote label, input {
+    font-weight: normal;
+    line-height: 1.8;
+    margin-left: 25px;
+}
+
+.netVote .button {
+    margin: 10px 50px;
+    width: 50px;
+    border: 1px solid #000;
+    background-color: rgb(212, 212, 212);
+
+}
+.netVote .button {
+    cursor: pointer;
+}
+
+.netVote .check1 {
+    display: none;
+}
+
+.netVote .ok {
+    display: inline;
+}
+
+/* .infoEx {
+    margin-left: 20px;
+    padding: 5px 20px;
+    border: 1px solid #000;
+} */
+
+.netVote h6 {
+    font-weight: normal;
+    line-height: 1.5;
+}
+
+.netVote .infoEx {
+    display: block;
+    margin-left: 20px;
+    padding: 5px 20px;
+    border: 1px solid #000;
+}
+
+.candiNum {
+    display: inline-block;
+}
+.erase {
+    display: none;
+}
+
+#register {
+    display: block;
+    margin: 5px 30px;
+}
+
+#register:hover {
+    cursor: pointer;
+}
+
+#registration {
+    display: inline-block;
+    margin: 8px 30px;
+}
+
+#registration:hover {
+    cursor: pointer;
+}
+
+.netVote .registration:hover {
+    cursor: pointer;
+}
+
+.select {
+    display: none;
+}
+.show {
+    display: inline;
+}
+
+.close {
+    display: block;
+    margin: 10px 30px;
+}
+.close:hover  {
+    cursor: pointer;
+}
+
+.open {
+    display: block;
+    margin: 10px 30px;
+}
+.open:hover  {
+    cursor: pointer;
+}
+
+.openResult {
+    padding-bottom: 100px;
+    margin-top: 30px;
+    margin-left: 5vw;
+    margin-bottom: 30px;
+}
+
+.openResult h3 {
+    line-height: 2;
+}
+
+.openResult h4 {
+    line-height: 1.5;
+}
+
+
+.openResult .result, .result1 {
+    display: block;
+    border: 1px solid #000;
+    padding: 5px 20px;
+    margin-left: 10px;
+}
+
+.openResult .result h3, .result1 h3 {
+    margin-top: 0px;
+}
+
+.openResult .result h4, .result1 h4 {
+    line-height: 2;
+    margin-top: 10px;
+}
+
+.openResult .result h6, .result1 h6 {
+    margin-top: 0px;
+    font-weight: normal;
+    line-height: 1.4;
+}
+
+.openResult .off {
+    display: none;
+}
+
+.openResult .result1 {
+    display: none;
+}
+
+.openResult .on {
+    display: block;
+}
+
+
+
+/* 選挙通知と投票案内 */
+
+.mailInfo h3 {
+    margin-top: 30px;
+    line-height: 2;
+}
+
+.mailInfo a {
+    display: inline-block;
+    line-height: 1.4;
+    margin: 5px 20px;
+}
+
+.info1 .meibo {
+    display: block;
+    margin: 5px auto;
+    line-height: 1.8;
+    font-weight: bold;
+    width: 130px;
+    border: 1px solid #000;
+    background-color: rgb(216, 215, 215);
+}
+
+.info1 .names {
+    display: block;
+    list-style: none;
+    width: 90%;
+    margin: 5px auto;
+    border: 1px solid #777;
+    line-height: 1.5;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.info1 .names li {
+    text-align: center;
+}
+
+.mailInfo #voteInfoEx {
+    margin: 5px 20px;
+    border: 1px solid red;
+}
+
+/* .mailInfo .infoEx {
+    margin: 4px auto;
+    width: 120px;
+    height: 15px;
+    font-size: 15px;
+    text-align: center;
+    background-color: rgb(227, 244, 168);
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 10px 16px;
+} */
+
+/* .mailInfo #voteInfoEx .infoEx:hover {
+    cursor: pointer;
+} */
+
+.mailInfo .ballot0 {
+    display: block;
+    margin: 10px 20px;
+    margin-bottom: 30px;
+    padding: 10px 20px;
+    border: 1px solid #000;
+    background-color: rgb(180, 250, 250);
+}
+
+.mailInfo .ballot0 h3 {
+    margin-top: 0;
+    line-height: 1.6;
+}
+
+.mailInfo h6 {
+    font-weight: normal;
+    line-height: 1.4;
+}
+
+.mailInfo .container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 20px;
+   }
+  
+.mailInfo .box {
+    margin-top: 0px;
+    width: 40px;
+    height: 50px;
+    background: white;
+    border: 1px solid blue;
+    background-color: rgb(180, 250, 250);
+    display: flex;
+}
+
+.mailInfo .box0 {
+    width: 60px;
+    border: 1px solid #fff;
+    justify-content: center;
+    align-items: center; 
+    font-size: 20px;
+    font-family:'Times New Roman', Times, serif
+}
+
+.mailInfo a {
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+.mailInfo .bltInfo {
+    display: none;
+}
+
+
+
+/* 有権者登録簿 */
+
+.voters {
+    margin: 0px 5vw;
+}
+
+.voters h2 {
+    line-height: 2.5;
+}
+
+.voters .voter {
+    margin: 25px;
+    padding: 10px;
+    width: 300px;
+    height: 120px;
+    box-sizing: border-box;
+    /* display: grid;
+     */
+    background-color: rgb(220, 218, 218);
+    border: 1px solid red;
+}
+
+.voters .voter a {
+    line-height: 1.3;
+}
+
+
+
+/* 投票案内データ */
+
+.ballots {
+    margin: 0px 5vw;
+}
+
+.ballots h2 {
+    line-height: 2.5;
+}
+
+.ballots h3 {
+    line-height: 2;
+}
+
+.ballots .ballotExample {
+    margin-bottom: 20px;
+}
+
+.ballots .ballotExample h6 {
+    font-weight: normal;
+    line-height: 1.3;
+}
+
+.ballots .ballot {
+    margin: 10px 20px;
+}
+
+#blt1, #blt2, #blt3 {
+    width: 200px;
+    height: 35px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #000;
+    background-color: rgb(220, 218, 218);
+}
+
+#blt1:hover {
+    cursor: pointer; 
+}
+#blt2:hover {
+    cursor: pointer; 
+}
+#blt3:hover {
+    cursor: pointer; 
+}
+
+.votes {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 250px 340px;
+    grid-template-rows: repeat(50, 150px);
+    gap: 0px 30px;
+}
+
+.votes .vote {
+    background-color: rgb(245, 245, 189);
+    border: 1px solid red;
+    margin: 15px 15px;
+    padding: 10px 10px;
+}
+
+.vote a {
+    line-height: 1.3;
+}
+
+
+
+
+/* 投票案内の送付 */
+
+.sends {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 340px 340px;
+    grid-template-rows: repeat(50, 150px);
+    gap: 0px 20px;
+}
+
+.sends .send {
+    border: 1px solid red;
+    margin: 15px 15px;
+    padding: 10px 10px;
+}
+
+.sends .send a {
+    line-height: 1.3;
+}
+
+.sends .voter {
+    background-color: rgb(220, 218, 218);
+}
+.sends .bltInfo {
+    background-color: rgb(246, 246, 205);
+}
+
+
+
+
+/* データベース */
+
+.database h3 {
+    line-height: 3;
+}
+
+.votesData {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 150px 120px 60px;
+    grid-template-rows: repeat(51, 80px);
+    gap: 0px 0px;
+}
+
+.votesData .ballot {
+    padding: 10px;
+    border: 1px solid #000;
+} 
+
+.votesData .cand {
+    padding: 10px;
+    border: 1px solid #000;
+} 
+
+
+.votesData1 {
+    margin-left: 30px;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 30px 80px 50px 110px 60px 90px;
+    grid-template-rows: repeat(50, 80px);
+    gap: 0px 0px;
+}
+
+
+
+
