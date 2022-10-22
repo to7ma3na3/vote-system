@@ -105,11 +105,15 @@ input, select {
 
 
 /* ここから */
+
+
 body {
-    width: 90vw;
+    width: 80vw;
     margin: 0 auto;
     margin-bottom: 30px;
 }
+
+/* ヘッダー */
 
 header {
     display: block;
@@ -117,21 +121,29 @@ header {
 }
 
 header .main-nav {
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-auto-flow: raw;
+    width: 90%;
+    margin: 0px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     line-height: 2;
     font-size: 14px;
+    list-style: none;
     color: rgb(42, 2, 102);
-
 }
 
+
+/* 共通 */
+
 h1 {
+    margin-top: 20px;
     font-size: 22px;
-    line-height: 2;
     color: cornflowerblue;
 }
 
 h2 {
+    margin-top: 10px;
     font-size: 20px;
     line-height: 2;
     color: #777;
@@ -144,13 +156,16 @@ h3 {
 
 h4 {
     font-size: 15px;
-    font-weight: 600;
-    line-height: 1.8;
+    font-weight: normal;
+    line-height: 2;
 }
 .date {
     margin-left: 5vw;
     font-size: 18px;
 }
+
+
+/* 定数と立候補者 */
 
 .candidate {
     margin-left: 5vw;
@@ -192,6 +207,9 @@ h4 {
     text-align: center;
 }
 
+
+/* 投票方法 */
+
 .methods {
     margin-top: 30px;
     margin-left: 5vw;
@@ -202,13 +220,16 @@ h4 {
     margin: 0 20px 0;
 }
 
+
+/* ネット投票（１） */
+
 .netVote {
     margin-top: 30px;
     margin-left: 5vw;
 }
 
 .netVote h4 {
-    margin-top: 25px;
+    margin-top: 20px;
     line-height: 1.5;
 }
 
@@ -243,16 +264,13 @@ h4 {
     display: inline;
 }
 
-/* .infoEx {
-    margin-left: 20px;
-    padding: 5px 20px;
-    border: 1px solid #000;
-} */
-
 .netVote h6 {
     font-weight: normal;
     line-height: 1.5;
 }
+
+
+/* ネット投票（２） */
 
 .netVote .infoEx {
     display: block;
@@ -277,24 +295,23 @@ h4 {
     cursor: pointer;
 }
 
-#registration {
-    display: inline-block;
-    margin: 8px 30px;
-}
 
-#registration:hover {
-    cursor: pointer;
-}
+/* ネット投票（４） */
 
-.netVote .registration:hover {
-    cursor: pointer;
-}
-
-.select {
-    display: none;
-}
-.show {
+.netVote4 a {
     display: inline;
+    padding: 1px 5px;
+    text-decoration: none;
+    border: 1px solid #555;
+}
+
+
+
+/* ネット投票（５） */
+
+.netVote a {
+    /* margin: 10px; */
+    line-height: 1.6;
 }
 
 .close {
@@ -305,23 +322,22 @@ h4 {
     cursor: pointer;
 }
 
-.open {
+
+/* 開票結果 */
+
+/* .open {
     display: block;
     margin: 10px 30px;
 }
 .open:hover  {
     cursor: pointer;
-}
+} */
 
 .openResult {
     padding-bottom: 100px;
     margin-top: 30px;
-    margin-left: 5vw;
+    /* margin-left: 5vw; */
     margin-bottom: 30px;
-}
-
-.openResult h3 {
-    line-height: 2;
 }
 
 .openResult h4 {
@@ -355,12 +371,25 @@ h4 {
     display: none;
 }
 
-.openResult .result1 {
+/* .openResult .result1 {
     display: none;
-}
+} */
 
 .openResult .on {
     display: block;
+}
+
+
+/* フッター */
+
+.footer {
+    display: flex;
+    height: 24px;
+    line-height: 1.2;
+    justify-content: center;
+    padding-top: 4px;
+    background: #777;
+    color: white;
 }
 
 
@@ -375,7 +404,7 @@ h4 {
 .mailInfo a {
     display: inline-block;
     line-height: 1.4;
-    margin: 5px 20px;
+    margin: 6px 20px;
 }
 
 .info1 .meibo {
@@ -408,23 +437,6 @@ h4 {
     border: 1px solid red;
 }
 
-/* .mailInfo .infoEx {
-    margin: 4px auto;
-    width: 120px;
-    height: 15px;
-    font-size: 15px;
-    text-align: center;
-    background-color: rgb(227, 244, 168);
-    color: #000;
-    border: 1px solid #000;
-    border-radius: 5px;
-    padding: 10px 16px;
-} */
-
-/* .mailInfo #voteInfoEx .infoEx:hover {
-    cursor: pointer;
-} */
-
 .mailInfo .ballot0 {
     display: block;
     margin: 10px 20px;
@@ -444,12 +456,23 @@ h4 {
     line-height: 1.4;
 }
 
+.mailInfo a {
+    font-weight: normal;
+    margin-bottom: 4px;
+}
+
 .mailInfo .container {
     display: flex;
     justify-content: center;
     align-items: flex-end;
     margin-bottom: 20px;
-   }
+}
+
+.ballot0 .index {
+    line-height: 1.5;
+    margin-top: 8px;
+    text-align: center;
+}
   
 .mailInfo .box {
     margin-top: 0px;
@@ -470,13 +493,34 @@ h4 {
     font-family:'Times New Roman', Times, serif
 }
 
-.mailInfo a {
-    line-height: 1.5;
-    margin-bottom: 0;
-}
-
 .mailInfo .bltInfo {
     display: none;
+}
+
+
+/* 結果通知 */
+
+.result1 .vote1 {
+    border: 1px solid #555;
+    padding: 1px 5px;
+    font-size: 14px;
+}
+
+.result1 .vote1:hover {
+    cursor: pointer;
+}
+
+.result1 .vote1Name {
+    display: none;
+}
+.result1 .show {
+    display: inline;
+}
+
+
+.result1 p {
+    line-height: 1.6;
+    /* margin-bottom: 20px; */
 }
 
 
@@ -489,6 +533,12 @@ h4 {
 
 .voters h2 {
     line-height: 2.5;
+}
+
+.voters h6 {
+    /* line-height: 1.5; */
+    font-weight: normal;
+    margin-bottom: 30px;
 }
 
 .voters .voter {
@@ -528,8 +578,14 @@ h4 {
 }
 
 .ballots .ballotExample h6 {
+    margin-left: 10vw;
+    font-size: 16px;
     font-weight: normal;
     line-height: 1.3;
+}
+
+.ballots .create {
+    margin-left: 10vw;
 }
 
 .ballots .ballot {
@@ -558,15 +614,16 @@ h4 {
 .votes {
     display: grid;
     grid-auto-flow: column;
-    grid-template-columns: 250px 340px;
-    grid-template-rows: repeat(50, 150px);
-    gap: 0px 30px;
+    grid-template-columns: 200px 330px;
+    grid-template-rows: repeat(20, 150px);
+    gap: 0px 10px;
+    margin-left: 10px;
 }
 
 .votes .vote {
     background-color: rgb(245, 245, 189);
     border: 1px solid red;
-    margin: 15px 15px;
+    margin: 10px 10px;
     padding: 10px 10px;
 }
 
@@ -583,7 +640,7 @@ h4 {
     display: grid;
     grid-auto-flow: column;
     grid-template-columns: 340px 340px;
-    grid-template-rows: repeat(50, 150px);
+    grid-template-rows: repeat(20, 150px);
     gap: 0px 20px;
 }
 
@@ -609,36 +666,199 @@ h4 {
 
 /* データベース */
 
-.database h3 {
-    line-height: 3;
+h3 {
+    line-height: 2;
+}
+
+.database {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.database a {
+    font-size: 15px;
 }
 
 .votesData {
     display: grid;
     grid-auto-flow: column;
     grid-template-columns: 150px 120px 60px;
-    grid-template-rows: repeat(51, 80px);
+    grid-template-rows: repeat(21, 70px);
     gap: 0px 0px;
+    margin: 20px;
+}
+
+.votesData1 {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 40px 210px 40px 80px 60px 110px 60px 100px;
+    grid-template-rows: repeat(20, 70px);
+    gap: 0px 0px;
+    margin: 20px;
+}
+
+.votesData .vote {
+    padding: 6px 12px;
+    border: 1px solid #000;
 }
 
 .votesData .ballot {
-    padding: 10px;
+    padding: 6px 12px;
     border: 1px solid #000;
 } 
 
-.votesData .cand {
-    padding: 10px;
+.votesData1 .vote {
+    padding: 6px 12px;
+    border: 1px solid #000;
+} 
+
+.votesData1 .cand {
+    padding: 6px 12px;
     border: 1px solid #000;
 } 
 
 
-.votesData1 {
-    margin-left: 30px;
-    display: grid;
-    grid-auto-flow: column;
-    grid-template-columns: 30px 80px 50px 110px 60px 90px;
-    grid-template-rows: repeat(50, 80px);
-    gap: 0px 0px;
+
+
+
+@media screen and (max-width: 1000px) {
+
+    .sends {
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-columns: 300px 300px;
+        grid-template-rows: repeat(20, 140px);
+        gap: 0px 10px;
+    }
+
+    .sends a {
+        font-size: 13px;
+    }
+
+
+    .database a {
+        font-size: 12px;
+    }
+    
+    .votesData {
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-columns: 120px 100px 50px;
+        grid-template-rows: repeat(21, 70px);
+        gap: 0px 0px;
+        margin: 20px;
+    }
+    
+    .votesData1 {
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-columns: 30px 200px 30px 65px 40px 90px 40px 80px;
+        grid-template-rows: repeat(20, 70px);
+        gap: 0px 0px;
+        margin: 20px;
+    }
+
+    .votesData1 .cand {
+        padding: 8px 8px;
+        border: 1px solid #000;
+    } 
+
+
+}
+
+
+
+
+@media screen and (max-width: 720px) {
+
+    h1 {
+        font-size: 20px;
+        /* font-size: 22px; */
+        line-height: 3;
+        color: cornflowerblue;
+    }
+    
+    h2 {
+        font-size: 18px;
+        /* font-size: 20px; */
+        line-height: 2;
+        color: #777;
+    }
+    
+    h3 {
+        margin-top: 17px;
+        font-size: 15px;
+    }
+    
+    h4 {
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 1.8;
+    }
+
+    .wrapper input {
+        width: 140px;
+    }
+
+
+    .youVote .way, .voterNum, .candiNum {
+        width: 120px;
+    }
+
+
+    .ballots {
+        margin: 0px 2vw;
+    }
+
+    .ballots .ballotExample h6 {
+        margin-left: 0vw;
+        font-size: 15px;
+        font-weight: normal;
+        line-height: 1.5;
+    }
+
+
+
+    .sends {
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-columns: 300px;
+        grid-template-rows: repeat(20, 130px);
+        /* grid-template-rows: repeat(100, 130px); */
+        gap: 0px 10px;
+        margin-left: 30px;
+    }
+
+    .sends .send {
+        border: 1px solid red;
+        margin: 10px 15px;
+        padding: 10px 10px;
+    }
+
+
+
+    .database {
+        display: block;
+        margin-left: 20px;
+    }
+
+    .votes {
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-columns: 140px 270px;
+        grid-template-rows: repeat(20, 130px);
+        /* grid-template-rows: repeat(50, 130px); */
+        gap: 0px 0px;
+    }
+    
+    .votes a {
+        font-size: 13px;
+    }
+
+
+
+
 }
 
 
